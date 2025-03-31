@@ -1,0 +1,32 @@
+body {
+    font-family: var(--Regular-font-family);
+    color: var(--text-primary);
+}
+
+.MaksNN-text {
+    --_font-size: var(--font-size, var(--M-font-size));
+    --_line-height: var(--line-height, var(--M-line-height));
+    --_font-family: var(--font-family, var(--Regular-font-family));
+
+    display: block;
+
+    max-height: max-content;
+
+    font-size: var(--_font-size);
+    line-height: var(--_line-height);
+    font-family: var(--_font-family);
+    font-weight: unset;
+
+    word-break: normal;
+    white-space: pre-line;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+        text-decoration: underline;
+    }
+}

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
+import TheHeader from "@/components/TheHeader.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -8,7 +8,17 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="dafault-layout">
+    <div class="default-layout">
+        <TheHeader />
         <RouterView />
     </div>
 </template>
+
+<style lang="scss" scoped>
+.default-layout {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100dvh;
+}
+</style>
