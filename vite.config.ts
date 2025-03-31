@@ -10,6 +10,8 @@ export default defineConfig({
     resolve: {
         alias: {
             "@views": fileURLToPath(new URL("./src/views", import.meta.url)),
+            "@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+            "@helpers": fileURLToPath(new URL("./src/helpers", import.meta.url)),
             "@layouts": fileURLToPath(new URL("./src/layouts", import.meta.url)),
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },

@@ -5,6 +5,7 @@
     "compilerOptions": {
         "composite": true,
         "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+        "allowJs": true,
 
         "baseUrl": ".",
         "paths": {
@@ -13,7 +14,8 @@
             "@views/*": ["src/views/*"],
             // "@stores/*": ["src/stores/*"],
             // "@doc-types/*": ["src/types/*"],
-            // "@assets/*": ["src/assets/*"],
+            "@assets/*": ["src/assets/*"],
+            "@helpers/*": ["src/helpers/*"],
             // "@img/*": ["src/assets/img/*"],
             // "@helpers/*": ["src/helpers/*"],
             "@layouts/*": ["src/layouts/*"],
