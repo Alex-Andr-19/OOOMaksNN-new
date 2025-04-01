@@ -2,14 +2,14 @@
 import { useContentStore } from "@/stores/content";
 import type { DeviceSizeTypes } from "@/types";
 import type { i18nContentName } from "@helpers/i18n";
-import { inject, ref, watch } from "vue";
+import { inject, ref, watch, type Ref } from "vue";
 import { useRoute } from "vue-router";
 import LocaleBlock from "../LocaleBlock/LocaleBlock.vue";
 
 const route = useRoute();
 const contentStore = useContentStore();
 
-const deviceSize = inject<DeviceSizeTypes>("deviceSize");
+const deviceSize = inject<Ref<DeviceSizeTypes>>("deviceSize");
 
 const showNavigation = ref<boolean>(false);
 
@@ -21,22 +21,22 @@ type NavigationItemType = {
 const navigationList = ref<NavigationItemType[]>([
     {
         propName: "MainPage",
-        text: "",
+        text: contentStore.getLocaleText("MainPage"),
         link: "/",
     },
     {
         propName: "aboutUs",
-        text: "",
+        text: contentStore.getLocaleText("aboutUs"),
         link: "/about",
     },
     {
         propName: "products",
-        text: "",
+        text: contentStore.getLocaleText("products"),
         link: "/products",
     },
     {
         propName: "contacts",
-        text: "",
+        text: contentStore.getLocaleText("contacts"),
         link: "/contacts",
     },
 ]);
@@ -48,12 +48,12 @@ function toggleNavigation() {
 watch(
     () => contentStore.locale,
     () => {
-        navigationList.value = navigationList.value.map((el) => ({
-            ...el,
-            text: contentStore.i18nContent[contentStore.locale][el.propName],
-        }));
+        for (let i in navigationList.value) {
+            navigationList.value[i].text = contentStore.getLocaleText(
+                navigationList.value[i].propName,
+            );
+        }
     },
-    { immediate: true },
 );
 </script>
 

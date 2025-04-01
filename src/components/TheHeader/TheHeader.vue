@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { inject } from "vue";
+import { inject, type Ref } from "vue";
 import LocaleBlock from "../LocaleBlock/LocaleBlock.vue";
 import NavigationComponent from "../NavigationComponent/NavigationComponent.vue";
 import type { DeviceSizeTypes } from "@/types";
 import { useContentStore } from "@/stores/content";
 
 const contentStore = useContentStore();
-const deviceSize = inject<DeviceSizeTypes>("deviceSize");
+const deviceSize = inject<Ref<DeviceSizeTypes>>("deviceSize");
 </script>
 
 <template>
@@ -27,9 +27,14 @@ const deviceSize = inject<DeviceSizeTypes>("deviceSize");
 
 <style lang="scss" scoped>
 .the-header {
+    position: fixed;
+    top: 0;
+
     display: flex;
     align-items: center;
     gap: 24px;
+
+    width: 100%;
 
     padding: 8px 24px;
     padding-bottom: 0;

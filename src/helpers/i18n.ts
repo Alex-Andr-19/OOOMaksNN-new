@@ -31,6 +31,8 @@ export type i18nContentName =
     | "infoblockcontent4"
     | "infoblockcontent5"
     | "infoblockcontent6"
+    | "phone_1"
+    | "phone_2"
     | "owndevelopments"
     | "additive"
     | "productionplace"
@@ -61,10 +63,12 @@ export type i18nContentName =
     | "productDev_5"
     | "newsTitle";
 
-export type i18nContent = Record<LocaleType, Record<i18nContentName, string>>;
+export type i18nContent = Record<LocaleType, Record<i18nContentName, string>> &
+    Record<LocaleType, Record<"empty", undefined>>;
 
 export const i18n: i18nContent = {
     ru: {
+        empty: undefined,
         logoImg: "/images/slogan.svg",
         phone: "Телефон",
         contacts: "Контакты",
@@ -97,6 +101,8 @@ export const i18n: i18nContent = {
         infoblockcontent5: "Россия, Нижегородская область, Дзержинск, Восточное шоссе, 123Б",
         infoblockcontent6:
             "Дзержинск, территория Восточный промрайон, Автозаводское ш., 9, корп. 1",
+        phone_1: "+7 (831) 434-39-38",
+        phone_2: "+7 (831) 434-36-80",
         owndevelopments: "Собственные разработки",
         additive: "Наше развитие",
         productionplace: "Производственная площадка",
@@ -145,6 +151,7 @@ export const i18n: i18nContent = {
         newsTitle: "Новости",
     },
     en: {
+        empty: undefined,
         logoImg: "/images/logo_en.png",
         phone: "Phone",
         contacts: "Contact Us",
@@ -177,6 +184,8 @@ export const i18n: i18nContent = {
         infoblockcontent5: "Russia, Nizhny Novgorod region, Dzerzhinsk, Eastern highway, 123B",
         infoblockcontent6:
             "Dzerzhinsk, Vostochny industrial area territory, Avtozavodskoe sh., 9, bldg. 1",
+        phone_1: "+7 (831) 434-39-38",
+        phone_2: "+7 (831) 434-36-80",
         owndevelopments: "Own developments",
         additive: "Our development",
         productionplace: "Production place",
