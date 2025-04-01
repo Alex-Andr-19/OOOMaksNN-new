@@ -100,7 +100,7 @@ watch(
     @media (max-width: 1024px) {
         width: 100%;
 
-        padding: 8px;
+        padding: 8px 16px;
     }
 
     &-list {
