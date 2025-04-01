@@ -1,0 +1,40 @@
+.media-carousel {
+    position: relative;
+
+    height: 100%;
+
+    &__tools {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    padding: 0 32px;
+
+    border: none;
+
+    &__arrow-left,
+    &__arrow-right {
+        --size: 45px;
+
+        background-color: var(--background-tetriary);
+    }
+
+    &__arrow-left {
+        --url: url("/images/default/chevron-left.svg");
+    }
+
+    &__arrow-right {
+        --url: url("/images/default/chevron-right.svg");
+    }
+}

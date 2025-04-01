@@ -61,6 +61,10 @@ export type i18nContentName =
     | "productDev_3"
     | "productDev_4"
     | "productDev_5"
+    | "carousel_slide_1"
+    | "carousel_slide_2"
+    | "carousel_slide_3"
+    | "carousel_slide_4"
     | "newsTitle";
 
 export type i18nContent = Record<LocaleType, Record<i18nContentName, string>> &
@@ -149,10 +153,15 @@ export const i18n: i18nContent = {
             "В 2018-19 гг. запущены в производство новые виды загущающих присадок для гидравлических масел - «Максойл В4». Присадки предназначены для повышения вязкости и индекса вязкости низкозастывающих гидравлических масел. В серии «В4» предлагается несколько комбинаций свойств присадки в зависимости от требований потребителя к температурным показателям масла и его стойкости к деструкции.",
 
         newsTitle: "Новости",
+
+        carousel_slide_1: "Мы производим присадки с 2000 года",
+        carousel_slide_2: "Крупнейшие производители масел выбирают наш продукт",
+        carousel_slide_3: "№1 в России по производству депрессорных и загущающих присадок к маслам",
+        carousel_slide_4: "Мы поставляем продукцию на экспорт",
     },
     en: {
         empty: undefined,
-        logoImg: "/images/logo_en.png",
+        logoImg: "/images/logo_en.webp",
         phone: "Phone",
         contacts: "Contact Us",
         MainPage: "Home",
@@ -232,5 +241,11 @@ export const i18n: i18nContent = {
             "In 2018-2019 new kinds of viscosity modifiers for hydraulic oils were introduced for production – MAXOIL V4. These additives are designed to increase viscosity and the index of viscosity of lower-pour-point hydraulic oils. V4-range is represented by several types of additives with different properties which are available for customers depending on their requirements for temperature-connected characteristics and shear stability.",
 
         newsTitle: "News",
+
+        carousel_slide_1: "We have been manufacturing additives since 2000",
+        carousel_slide_2: "Major oil manufacturers choose our brand",
+        carousel_slide_3: "We produce for export",
+        carousel_slide_4:
+            "The leading manufacturer of pour point depressants and viscosity index improvers in Russia",
     },
 };
