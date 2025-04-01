@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import DefaultLayout from "@layouts/DefaultLayout.vue";
+import WindowResizeProvider from "./components/WindowResizeProvider.vue";
 </script>
 
 <template>
-    <DefaultLayout />
+    <WindowResizeProvider>
+        <DefaultLayout />
+    </WindowResizeProvider>
 </template>

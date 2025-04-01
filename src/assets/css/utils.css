@@ -1,0 +1,43 @@
+.rect-size {
+    --_size: var(--size, 24px);
+
+    min-width: var(--_size);
+    min-height: var(--_size);
+    width: var(--_size);
+    height: var(--_size);
+    max-width: var(--_size);
+    max-height: var(--_size);
+    aspect-ratio: 1;
+}
+
+.masked-block {
+    --_url: var(--url);
+
+    mask: var(--_url);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+
+    background-color: currentColor;
+}
+
+.custom-scrollbar {
+    --_scrollbar-color: var(--scrollbar-color, #3E3E3E);
+    --_scrollbar-width: var(--scrollbar-width, 4px);
+    scrollbar-gutter: auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: var(--_scrollbar-width);
+    height: var(--_scrollbar-width);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: var(--_scrollbar-color);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #0000;
+    border-radius: 100px;
+}
