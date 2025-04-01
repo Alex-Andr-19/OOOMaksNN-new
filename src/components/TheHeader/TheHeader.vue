@@ -32,6 +32,7 @@ const deviceSize = inject<DeviceSizeTypes>("deviceSize");
     gap: 24px;
 
     padding: 8px 24px;
+    padding-bottom: 0;
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -39,6 +40,7 @@ const deviceSize = inject<DeviceSizeTypes>("deviceSize");
         gap: 16px;
 
         padding: 8px 0;
+        padding-bottom: 0;
     }
 }
 
