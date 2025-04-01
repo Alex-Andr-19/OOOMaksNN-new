@@ -117,7 +117,7 @@ watch(
         @media (max-width: 1024px) {
             flex-direction: column;
             justify-content: start;
-            gap: 4px;
+            gap: 0;
 
             height: 0;
 
