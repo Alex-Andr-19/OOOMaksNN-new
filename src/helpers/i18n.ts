@@ -65,7 +65,7 @@ export type i18nContent = Record<LocaleType, Record<i18nContentName, string>>;
 
 export const i18n: i18nContent = {
     ru: {
-        logoImg: "~/assets/img/slogan.svg",
+        logoImg: "/images/slogan.svg",
         phone: "Телефон",
         contacts: "Контакты",
         address: "Адрес",
@@ -145,7 +145,7 @@ export const i18n: i18nContent = {
         newsTitle: "Новости",
     },
     en: {
-        logoImg: "~/assets/img/slogan.svg",
+        logoImg: "/images/logo_en.png",
         phone: "Phone",
         contacts: "Contact Us",
         MainPage: "Home",
