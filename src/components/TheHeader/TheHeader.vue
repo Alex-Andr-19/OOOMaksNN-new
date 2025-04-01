@@ -49,7 +49,7 @@ const deviceSize = inject<DeviceSizeTypes>("deviceSize");
         height: 80px;
 
         @media (max-width: 1024px) {
-            height: 164px;
+            max-width: 90dvw;
         }
     }
 }
