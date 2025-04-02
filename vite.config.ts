@@ -15,6 +15,9 @@ const options: UserConfig = {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
+    build: {
+        outDir: "./docs",
+    },
 };
 
 if (process.env.NODE_ENV !== "development") {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, type Ref } from "vue";
+import { onBeforeUnmount, onMounted, ref, type Ref } from "vue";
 
 type MediaCarouselProps = {
     images: string[];
@@ -18,23 +18,32 @@ function circleNumber(min: number, value: number, max: number): number {
 }
 
 function setCurrentIndex(idx: number) {
-    currentIndex.value = circleNumber(0, idx, _images.length);
+    currentIndex.value = circleNumber(0, idx, _images.length - 1);
 
     const targetScrollLeftValue = mediaCarouselElement.value.clientWidth * currentIndex.value;
-    if (mediaCarouselElement.value.scrollLeft !== targetScrollLeftValue)
+    if (mediaCarouselElement.value.scrollLeft !== targetScrollLeftValue) {
         mediaCarouselElement.value.scroll({
             left: targetScrollLeftValue,
             behavior: "smooth",
         });
+    }
 }
 
+function eventListenerOnScroll() {
+    const targetIndex = Math.round(
+        mediaCarouselElement.value.scrollLeft / mediaCarouselElement.value.clientWidth,
+    );
+    setCurrentIndex(targetIndex);
+}
 onMounted(() => {
-    mediaCarouselElement.value.addEventListener("scrollend", (ev) => {
-        const targetIndex = Math.round(
-            mediaCarouselElement.value.scrollLeft / mediaCarouselElement.value.clientWidth,
-        );
-        setCurrentIndex(targetIndex);
-    });
+    mediaCarouselElement.value.addEventListener("scrollend", eventListenerOnScroll);
+
+    setInterval(() => {
+        setCurrentIndex(currentIndex.value + 1);
+    }, 10000);
+});
+onBeforeUnmount(() => {
+    mediaCarouselElement.value.removeEventListener("scrollend", eventListenerOnScroll);
 });
 </script>
 
