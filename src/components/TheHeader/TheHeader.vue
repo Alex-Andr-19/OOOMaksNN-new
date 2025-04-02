@@ -39,6 +39,10 @@ const deviceSize = inject<Ref<DeviceSizeTypes>>("deviceSize");
     padding: 8px 24px;
     padding-bottom: 0;
 
+    background-color: var(--background-primary);
+
+    z-index: 100;
+
     @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;

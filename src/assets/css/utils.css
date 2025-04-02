@@ -21,6 +21,11 @@
     background-color: currentColor;
 }
 
+.debug-indicator {
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+
 .custom-scrollbar {
     --_scrollbar-color: var(--scrollbar-color, #3E3E3E);
     --_scrollbar-width: var(--scrollbar-width, 4px);

@@ -35,5 +35,9 @@ onMounted(() => {
 <style lang="scss" scoped>
 .welcome-block {
     height: 80dvh;
+
+    @media (max-width: 1024px) {
+        height: 50dvh;
+    }
 }
 </style>
