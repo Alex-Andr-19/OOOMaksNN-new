@@ -5,7 +5,7 @@ import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
 const options = {
-    base: "/",
+    base: "",
     plugins: [vue(), vueDevTools()],
     resolve: {
         alias: {
@@ -18,9 +18,9 @@ const options = {
     },
 };
 
-if (process.env.NODE_ENV !== "development") {
-    options.base = "/OOOMaks-NN/";
-}
+// if (process.env.NODE_ENV !== "development") {
+//     options.base = "/OOOMaks-NN/";
+// }
 
 // https://vite.dev/config/
 export default defineConfig(options);
