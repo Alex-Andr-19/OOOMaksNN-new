@@ -7,10 +7,10 @@
         "dev": "vite",
         "build": "run-p type-check \"build-only {@}\" --",
         "preview": "vite preview",
-        "build-only": "vite build",
+        "build-only": "vue-tsc --build && vite build",
         "type-check": "vue-tsc --build",
         "format": "prettier --write src/",
-        "publish-cite": "vue-tsc --build && vite build && git subtree push --prefix dist origin gh-pages"
+        "publish-cite": "pnpm build && gh-pages -d dist"
     },
     "dependencies": {
         "pinia": "^3.0.1",
@@ -23,6 +23,7 @@
         "@types/node": "^22.13.9",
         "@vitejs/plugin-vue": "^5.2.1",
         "@vue/tsconfig": "^0.7.0",
+        "gh-pages": "^6.3.0",
         "npm-run-all2": "^7.0.2",
         "prettier": "3.5.3",
         "sass-embedded": "^1.86.0",
