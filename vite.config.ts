@@ -15,9 +15,9 @@ const options: UserConfig = {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
-    build: {
-        outDir: "./docs",
-    },
+    // build: {
+    //     outDir: "./docs",
+    // },
 };
 
 export default defineConfig(options);
