@@ -4,9 +4,8 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
-// https://vite.dev/config/
-export default defineConfig({
-    base: "/OOOMaks-NN/",
+const options = {
+    base: "/",
     plugins: [vue(), vueDevTools()],
     resolve: {
         alias: {
@@ -17,4 +16,11 @@ export default defineConfig({
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
-});
+};
+
+if (process.env.NODE_ENV !== "development") {
+    options.base = "/OOOMaks-NN/";
+}
+
+// https://vite.dev/config/
+export default defineConfig(options);
