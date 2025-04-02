@@ -18,9 +18,9 @@ const options = {
     },
 };
 
-// if (process.env.NODE_ENV !== "development") {
-//     options.base = "/OOOMaks-NN/";
-// }
+if (process.env.NODE_ENV !== "development") {
+    options.base = "/OOOMaks-NN/";
+}
 
 // https://vite.dev/config/
 export default defineConfig(options);
