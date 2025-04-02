@@ -10,7 +10,7 @@
         "build-only": "vite build",
         "type-check": "vue-tsc --build",
         "format": "prettier --write src/",
-        "publish-cite": "vue-tsc --build && vite build && git add * && git commit 'Publish' && git push"
+        "publish-cite": "vue-tsc --build && vite build && git add . && git commit 'Publish' && git push"
     },
     "dependencies": {
         "pinia": "^3.0.1",
