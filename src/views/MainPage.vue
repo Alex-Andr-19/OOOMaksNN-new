@@ -2,7 +2,7 @@
 import MediaCarousel from "@/components/MediaCarousel/MediaCarousel.vue";
 import { useContentStore } from "@/stores/content";
 import type { i18nContentName } from "@helpers/i18n";
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 
 const contentStore = useContentStore();
 
@@ -17,6 +17,18 @@ function createCarousel() {
         carouselDescriptions.value.push(contentStore.getLocaleText(textName));
     }
 }
+
+watch(
+    () => contentStore.locale,
+    () => {
+        carouselDescriptions.value = [];
+        let i;
+        for (i = 1; i <= 4; i++) {
+            let textName = `carousel_slide_${i}` as i18nContentName;
+            carouselDescriptions.value.push(contentStore.getLocaleText(textName));
+        }
+    },
+);
 
 createCarousel();
 onMounted(() => {

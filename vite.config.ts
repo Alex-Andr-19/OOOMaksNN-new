@@ -20,11 +20,4 @@ const options: UserConfig = {
     },
 };
 
-// if (process.env.NODE_ENV !== "development") {
-//     options.base = "/OOOMaks-NN/";
-// }
-
-console.log(options);
-
-// https://vite.dev/config/
 export default defineConfig(options);

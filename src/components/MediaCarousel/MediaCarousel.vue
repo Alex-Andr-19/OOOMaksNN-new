@@ -11,8 +11,6 @@ const { images: _images, descriptions: _descriptions } = defineProps<MediaCarous
 const mediaCarouselElement = ref<HTMLElement>() as Ref<HTMLElement>;
 const currentIndex = ref<number>(0);
 
-let scrollListener;
-
 function circleNumber(min: number, value: number, max: number): number {
     return value < min ? max : value > max ? min : value;
 }
