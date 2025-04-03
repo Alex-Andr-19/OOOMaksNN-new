@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useContentStore } from "@/stores/content";
-import type { i18nContentName } from "@helpers/i18n";
+import type { i18nContentName } from "@/types/i18n";
 import MediaCarousel from "@modules/MainPage/MediaCarousel/MediaCarousel.vue";
 import OffersBlock from "@modules/MainPage/OffersBlock/OffersBlock.vue";
 import { onMounted, ref, watch } from "vue";

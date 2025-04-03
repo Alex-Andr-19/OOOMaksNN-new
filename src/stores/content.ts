@@ -1,6 +1,7 @@
 import { ref, computed } from "vue";
 import { defineStore } from "pinia";
-import { i18n, type i18nContent, type i18nContentName, type LocaleType } from "@helpers/i18n";
+import { i18n } from "@helpers/i18n";
+import type { i18nContent, i18nContentName, LocaleType } from "@/types/i18n";
 
 export const useContentStore = defineStore("content", () => {
     const locale = ref<LocaleType>("ru");
