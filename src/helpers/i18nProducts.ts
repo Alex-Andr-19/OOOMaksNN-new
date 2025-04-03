@@ -7,7 +7,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-002-4828553-2002",
             shortDescription:
                 "Maxoil V Concentrate is a multifunctional concentrated additive for engine oils which performs both the functions of a PPD and VII. This additive is designed for multigrade oils for gasoline and diesel engines.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "Maxoil V Concentrate is a multifunctional concentrated additive for engine oils which performs both the functions of a PPD and VII. This additive is designed for multigrade oils for gasoline and diesel engines. The use of Maxoil V Concentrate allows manufacturing oils which respond the most stringent demands of API and ACEA. Maxoil V Concentrate is a cost-effective VII with a high thickening ability. Maxoil V Concentrate provides oil with excellent low-temperature properties along with a good shear stability and a low pour point. Maxoil V Concentrate is a low-viscous emulsion of an OCP in base oil. In contrast to traditional OCP modifiers, Maxoil V Concentrate may be used at temperatures close to room temperature. Low viscosity of the additive in a wide temperature range provides easy mixing of the additive.",
             tableData: [
@@ -71,7 +71,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-003-4828553-2012",
             shortDescription:
                 "Viscosity modifier / pour point depressant for hydraulic oil. MAXOIL® V3-01 provides cost-effective thickening and excellent shear stability. It efficiently controls wax crystallization and allows manufacturing hydraulic oils with good low-temperature viscosity and a low pour point.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "Viscosity modifier / pour point depressant for hydraulic oil. MAXOIL® V3-01 provides cost-effective thickening and excellent shear stability. It efficiently controls wax crystallization and allows manufacturing hydraulic oils with good low-temperature viscosity and a low pour point. This additive is designed for oils based on paraffinic or a mix of paraffinic and naphthenic stocks. MAXOIL® V3-01 is a solution of polyalkylmethacrylate in highly reﬁned mineral oil.",
             tableData: [
@@ -177,7 +177,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-005-4828553-2012",
             shortDescription:
                 "Shear-stable viscosity index improver for multigrade gear oils and fluids for A/T and CVT. MAXOIl® V3-02 is designed to be used in shear-stable oils like SАЕ 80W-140, SАЕ 75W-90 and other multigrade gear oils.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "Shear-stable viscosity index improver for multigrade gear oils and fluids for A/T and CVT. MAXOIl® V3-02 is designed to be used in shear-stable oils like SАЕ 80W-140, SАЕ 75W-90 and other multigrade gear oils. The additive may be used in mineral, hydrocracked and synthetic base oils. MAXOIL® V3-02 is a viscous solution of polyalkylmethacrylate in solvent-reﬁned mineral oil.",
             tableData: [
@@ -241,7 +241,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-013-4828553-2016",
             shortDescription:
                 "MAXOIL® V4-01 is aimed at increasing viscosity and VI of lower-pour-point hydraulic oils. It provides optimum viscosity in a wide temperature range alongside with a maximum VI, excellent low-temperature characteristics and good shear stability.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "MAXOIL® V4-01 is aimed at increasing viscosity and VI of lower-pour-point hydraulic oils. It provides optimum viscosity in a wide temperature range alongside with a maximum VI, excellent low-temperature characteristics and good shear stability. It is used in oils for heavy-duty antivibration systems and power steering fluids. May also be applied in highly refined low-in-paraffin base oils. MAXOIL® V4-01 is a solution of a polymer in highly reﬁned mineral oil.",
             tableData: [
@@ -347,7 +347,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-014-4828553-2016",
             shortDescription:
                 "MAXOIL® V4-02 provides increase of the viscosity index as well as excellent shear stability to hydraulic fluids.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "MAXOIL® V4-02 provides increase of the viscosity index as well as excellent shear stability to hydraulic fluids. It is designed for oil formulations containing paraffinic or a mix of paraffinic and naphthenic stocks and responds to special requirements to filterability and demulsibility. MAXOIL® V4-02 is a solution of a polymer in highly reﬁned mineral oil.",
             tableData: [
@@ -453,7 +453,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-015-4828553-2016",
             shortDescription:
                 "MAXOIL® V4-03 provides increase of the viscosity index as well as excellent shear stability to hydraulic fluids.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "MAXOIL® V4-03 provides increase of the viscosity index as well as excellent shear stability to hydraulic fluids. Along with a proper pour-point depressant it efficiently controls paraffin crystallization and allows manufacturing hydraulic fluids with good low-temperature characterisctics and a low pour-point. This additive is designed for oil formulations containing paraffinic or a mix of paraffinic and naphthenic stocks and responds to special requirements to filterability and demulsibility. MAXOIL® V4-03 is a solution of a polymer in highly reﬁned mineral oil. Low viscosity of the additive in a wide temperature range provides good pumpability and blendability of the additive.",
             tableData: [
@@ -559,7 +559,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-004-4828553-2012",
             shortDescription:
                 "MAXOIL® V2 is a viscosity index improver for hydraulic oils. It provides excellent thickening and the increase of the viscosity index in cost-effective formulations.",
-            category: "viscosity index improvers",
+            category: "Viscosity index improvers",
             longDescription:
                 "MAXOIL® V2 is a viscosity index improver for hydraulic oils. It provides excellent thickening and the increase of the viscosity index in cost-effective formulations. MAXOIL® V2 efficiently controls wax crystallization and allows manufacturing hydraulic oils of small low-temperature viscosity and of a low pour point. This additive is designed for oils based on paraffinic or a mix of paraffinic and naphthenic stocks. MAXOIL® V2 is a solution of polyalkylmethacrylate in highly reﬁned mineral oil.",
             tableData: [
@@ -649,9 +649,9 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-001-4828553-2000",
             shortDescription:
                 "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids.",
-            category: "pour point depressants",
+            category: "Pour point depressants",
             longDescription:
-                "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids. The additive provides excellent pour point depression to a broad range of lubricants. Particularly effective in formulations based on catalytically dewaxed stocks and higher-ethylene-content OCP viscosity index improvers. A typical treat rate is 0.3 - 0.5% by weight. MAXOIL D mark A is a viscous solution of polyalkylmethacrylate in solvent-reﬁned mineral oil.",
+                "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids. The additive provides excellent pour point depression to a broad range of lubricants. Particularly effective in formulations based on catalytically dewaxed stocks and higher-ethylene-content OCP Viscosity index improvers. A typical treat rate is 0.3 - 0.5% by weight. MAXOIL D mark A is a viscous solution of polyalkylmethacrylate in solvent-reﬁned mineral oil.",
             tableData: [
                 {
                     title: "appearance/color",
@@ -721,7 +721,7 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-001-4828553-2000",
             shortDescription:
                 "Multi-purpose pour point depressant / viscosity index improver for a broad range of lubricants",
-            category: "pour point depressants",
+            category: "Pour point depressants",
             longDescription:
                 "Multi-purpose pour point depressant / viscosity index improver for a broad range of lubricants. This is a cost-effective PPD, improving not only low-temperature properties of oils but also increasing their viscosity and viscosity index. A typical treat rate is 0.3 - 0.6% by weight. A higher treat rate may be used to further improve viscosity and VI. Maxoil D mark B is a viscous solution of polyalkylmethacrylate in solvent-refined mineral oil.",
             tableData: [
@@ -801,9 +801,9 @@ export const i18n: Producti18nType = {
             subtitle: "Тech.Spec. 0257-001-4828553-2000",
             shortDescription:
                 "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids.",
-            category: "pour point depressants",
+            category: "Pour point depressants",
             longDescription:
-                "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids. It provides excellent pour point depression to a broad range of lubricants. Particularly effective in formulations based on catalytically dewaxed stocks and higher-ethylene-content OCP viscosity index improvers. A typical treat rate is 0.1 - 0.3% by weight. For oils like gear oil SАЕ 80W-90, a higher treat rate may be needed - 0.5 – 1% by weight. MAXOIL D mark K is a viscous concentrate of polyalkylmethacrylate in solvent-reﬁned mineral oil.",
+                "Effective, multi-purpose, shear-stable pour point depressant for engine oils, gear oils and hydraulic ﬂuids. It provides excellent pour point depression to a broad range of lubricants. Particularly effective in formulations based on catalytically dewaxed stocks and higher-ethylene-content OCP Viscosity index improvers. A typical treat rate is 0.1 - 0.3% by weight. For oils like gear oil SАЕ 80W-90, a higher treat rate may be needed - 0.5 – 1% by weight. MAXOIL D mark K is a viscous concentrate of polyalkylmethacrylate in solvent-reﬁned mineral oil.",
             tableData: [
                 {
                     title: "appearance/color",

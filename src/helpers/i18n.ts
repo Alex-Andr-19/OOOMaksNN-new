@@ -132,12 +132,12 @@ export const i18n: i18nContent = {
         researchlab: "Research laboratory",
         newresearchlab: "Laboratory in a new production",
 
-        wdwo_1: "High-quality pour point depressants and viscosity modifiers for engine, gear and hydraulic oils",
+        wdwo_1: "High-quality Pour point depressants and viscosity modifiers for engine, gear and hydraulic oils",
         wdwo_2: "Strong partnership, an individual approach to the technical requirements of each customer",
         wdwo_3: "Affordable pricing, various terms of delivery of the products",
 
         pvlTextOnImg:
-            "The leading manufacturer of pour point depressants and viscosity index improvers in Russia.\n",
+            "The leading manufacturer of Pour point depressants and Viscosity index improvers in Russia.\n",
 
         generalInfoTitle: "General Information",
         generalInfo_1:
@@ -176,6 +176,6 @@ export const i18n: i18nContent = {
         carousel_slide_2: "Major oil manufacturers choose our brand",
         carousel_slide_3: "We produce for export",
         carousel_slide_4:
-            "The leading manufacturer of pour point depressants and viscosity index improvers in Russia",
+            "The leading manufacturer of Pour point depressants and Viscosity index improvers in Russia",
     },
 };

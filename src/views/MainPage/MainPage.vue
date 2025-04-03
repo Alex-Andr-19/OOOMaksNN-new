@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ProductsBlock from "@/components/ProductsBlock/ProductsBlock.vue";
 import { useContentStore } from "@/stores/content";
 import type { i18nContentName } from "@/types/i18n";
 import MediaCarousel from "@modules/MainPage/MediaCarousel/MediaCarousel.vue";
@@ -44,6 +45,8 @@ onMounted(() => {
         </section>
 
         <OffersBlock />
+
+        <ProductsBlock />
     </div>
 </template>
 

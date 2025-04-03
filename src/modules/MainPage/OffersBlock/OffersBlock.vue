@@ -6,7 +6,7 @@ const contentStore = useContentStore();
 
 <template>
     <section class="offers">
-        <h2 class="offers__title MaksNN-text L SemiBold">
+        <h2 class="offers__title MaksNN-text XL Bold">
             {{ contentStore.getLocaleText("whatdoweoffer") }}
         </h2>
 
