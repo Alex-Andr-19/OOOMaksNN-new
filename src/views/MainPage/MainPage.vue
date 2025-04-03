@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import MediaCarousel from "@/components/MediaCarousel/MediaCarousel.vue";
 import { useContentStore } from "@/stores/content";
 import type { i18nContentName } from "@helpers/i18n";
+import MediaCarousel from "@modules/MainPage/MediaCarousel/MediaCarousel.vue";
+import OffersBlock from "@modules/MainPage/OffersBlock/OffersBlock.vue";
 import { onMounted, ref, watch } from "vue";
 
 const contentStore = useContentStore();
@@ -42,49 +43,7 @@ onMounted(() => {
             <MediaCarousel :images="carouselImages" :descriptions="carouselDescriptions" />
         </section>
 
-        <section class="offers">
-            <h2 class="offers__title MaksNN-text L SemiBold">
-                {{ contentStore.getLocaleText("whatdoweoffer") }}
-            </h2>
-
-            <div class="offers__list">
-                <div class="offer">
-                    <div class="offer__logo">
-                        <img
-                            src="/images/molecule.svg"
-                            alt="Молекула"
-                            class="offer__img rect-size"
-                        />
-                    </div>
-
-                    <p class="offer__text MaksNN-text L XL_tablet">
-                        {{ contentStore.getLocaleText("wdwo_1") }}
-                    </p>
-                </div>
-                <div class="offer">
-                    <div class="offer__logo">
-                        <img
-                            src="/images/handshake.svg"
-                            alt="Рукопожатие"
-                            class="offer__img rect-size"
-                        />
-                    </div>
-
-                    <p class="offer__text MaksNN-text L XL_tablet">
-                        {{ contentStore.getLocaleText("wdwo_2") }}
-                    </p>
-                </div>
-                <div class="offer">
-                    <div class="offer__logo">
-                        <img src="/images/price-tag.svg" alt="Цены" class="offer__img rect-size" />
-                    </div>
-
-                    <p class="offer__text MaksNN-text L XL_tablet">
-                        {{ contentStore.getLocaleText("wdwo_3") }}
-                    </p>
-                </div>
-            </div>
-        </section>
+        <OffersBlock />
     </div>
 </template>
 

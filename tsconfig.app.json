@@ -19,7 +19,7 @@
             // "@img/*": ["src/assets/img/*"],
             // "@helpers/*": ["src/helpers/*"],
             "@layouts/*": ["src/layouts/*"],
-            // "@router/*": ["src/router/*"],
+            "@modules/*": ["src/modules/*"],
             "@/*": ["src/*"]
         }
     }
