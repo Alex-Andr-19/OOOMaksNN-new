@@ -11,5 +11,5 @@ export const useProductsStore = defineStore("products", () => {
         return content.value[name][locale];
     }
 
-    return { getContentByName };
+    return { content, getContentByName };
 });
