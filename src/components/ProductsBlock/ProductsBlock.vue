@@ -3,6 +3,7 @@ import { useContentStore } from "@/stores/content";
 import { useProductsStore } from "@/stores/productsStore";
 import type { ProductsNames, ProductValue } from "@/types/products";
 import { ref, watch } from "vue";
+import SelectedProduct from "./SelectedProduct/SelectedProduct.vue";
 
 const contentStore = useContentStore();
 const productStore = useProductsStore();
@@ -60,7 +61,15 @@ watch(() => contentStore.locale, getProductsData);
                 </h3>
 
                 <div class="product-group__list">
-                    <button v-for="el in group" class="product-item">
+                    <button
+                        v-for="el in group"
+                        @click="
+                            productStore.setSelectedProduct(
+                                productStore.getProductNameByTitle(el.title),
+                            )
+                        "
+                        class="product-item"
+                    >
                         <p class="product-item__title MaksNN-text L SemiBold">
                             {{ el.title }}
                         </p>
@@ -72,6 +81,9 @@ watch(() => contentStore.locale, getProductsData);
             </article>
         </div>
     </section>
+    <Teleport to="#modalOverlay">
+        <SelectedProduct />
+    </Teleport>
 </template>
 
 <style lang="scss" scoped src="./style.scss"></style>
