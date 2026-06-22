@@ -1,33 +1,36 @@
-# OOOMaksNN-new-source
+# Макс-НН
 
-This template should help get you started developing with Vue 3 in Vite.
+Сайт на Vue 3, TypeScript и Vite.
 
-## Recommended IDE Setup
+## Разработка
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Требуются Node.js и pnpm.
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Сайт будет доступен по адресу, указанному Vite в терминале.
 
-```sh
-pnpm build
+## Production
+
+Требуются Git, Node.js, pnpm и запущенный Docker.
+
+```bash
+pnpm container:up
 ```
+
+Команда установит зависимости, соберёт проект, создаст Docker-образ с тегом по хэшу последнего коммита и запустит контейнер на:
+
+```text
+http://localhost:8080
+```
+
+Другой порт:
+
+```bash
+HOST_PORT=80 pnpm container:up
+```
+
+По умолчанию production-запуск требует чистого Git-дерева.
