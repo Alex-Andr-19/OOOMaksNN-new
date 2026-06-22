@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Contacts from "@/components/Contacts/Contacts.vue";
+import ContactsView from "@/modules/Contacts/ContactsView.vue";
 </script>
 
 <template>
-    <Contacts />
+    <ContactsView />
 </template>

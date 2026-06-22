@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ProductsBlock from "@/components/ProductsBlock/ProductsBlock.vue";
+import ProductCatalog from "@/modules/Products/ProductCatalog.vue";
 </script>
 
 <template>
-    <ProductsBlock />
+    <ProductCatalog />
 </template>

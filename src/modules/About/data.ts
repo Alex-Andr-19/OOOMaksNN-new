@@ -1,42 +1,14 @@
-<script setup lang="ts">
-import { useContentStore } from "@/stores/content";
-import type { i18nContentName, LocaleType } from "@/types/i18n";
-import { computed, ref } from "vue";
+import type { LocaleType } from "@/types/i18n";
+import type { AboutTab, InterviewItem, NewsContent } from "./types";
 
-type SectionId = "general" | "news" | "leader" | "development";
-
-type NewsContent = {
-    title: string;
-    paragraphs: string[];
-};
-
-const contentStore = useContentStore();
-const activeSection = ref<SectionId>("general");
-
-const sections: { id: SectionId; label: i18nContentName }[] = [
+export const aboutTabs: AboutTab[] = [
     { id: "general", label: "generalInfoTitle" },
     { id: "news", label: "newsTitle" },
     { id: "leader", label: "leader" },
     { id: "development", label: "prodDev" },
 ];
 
-const leaderLines: i18nContentName[] = [
-    "leaderLine1",
-    "leaderLine2",
-    "leaderLine3",
-    "leaderLine4",
-    "leaderLine5",
-];
-
-const developmentLines: i18nContentName[] = [
-    "productDev_1",
-    "productDev_2",
-    "productDev_3",
-    "productDev_4",
-    "productDev_5",
-];
-
-const newsContent: Record<LocaleType, NewsContent> = {
+export const newsContent: Record<LocaleType, NewsContent> = {
     ru: {
         title: "Одобрения от европейских производителей: присадка MAXOIL в масле ROSNEFT",
         paragraphs: [
@@ -57,9 +29,7 @@ const newsContent: Record<LocaleType, NewsContent> = {
     },
 };
 
-const currentNews = computed(() => newsContent[contentStore.locale]);
-
-const interview = [
+export const interview: InterviewItem[] = [
     {
         question:
             "Александр Алексеевич, как и когда началось ваше взаимодействие с зарубежными фирмами?",
@@ -105,174 +75,3 @@ const interview = [
         ],
     },
 ];
-
-function showSection(section: SectionId) {
-    activeSection.value = section;
-}
-</script>
-
-<template>
-    <section class="about-us">
-        <h1 class="about-us__title MaksNN-text XL Bold">
-            {{ contentStore.getLocaleText("aboutCompanyDropDown") }}
-        </h1>
-
-        <nav class="about-navigation" :aria-label="contentStore.getLocaleText('aboutUs')">
-            <button
-                v-for="section in sections"
-                :key="section.id"
-                class="about-navigation__item MaksNN-text M SemiBold"
-                :class="{ active: activeSection === section.id }"
-                type="button"
-                role="tab"
-                :aria-selected="activeSection === section.id"
-                :aria-controls="`about-section-${section.id}`"
-                @click="showSection(section.id)"
-            >
-                {{ contentStore.getLocaleText(section.label) }}
-            </button>
-        </nav>
-
-        <div class="about-us__content">
-            <article
-                v-if="activeSection === 'general'"
-                id="about-section-general"
-                class="about-section"
-                role="tabpanel"
-            >
-                <div class="about-hero">
-                    <img src="/images/about-us/factory.webp" alt="" class="about-hero__image" />
-                    <p class="about-hero__caption MaksNN-text L SemiBold">
-                        {{ contentStore.getLocaleText("pvlTextOnImg") }}
-                    </p>
-                </div>
-
-                <div class="general-info">
-                    <p class="MaksNN-text M">
-                        {{ contentStore.getLocaleText("generalInfo_1") }}
-                    </p>
-                    <p class="MaksNN-text M">
-                        {{ contentStore.getLocaleText("generalInfo_2") }}
-                        <button
-                            v-if="contentStore.getLocaleText('generalInfo_2_name')"
-                            class="leader-link"
-                            type="button"
-                            @click="showSection('leader')"
-                        >
-                            {{ contentStore.getLocaleText("generalInfo_2_name") }}
-                        </button>
-                        {{ contentStore.getLocaleText("generalInfo_2_1") }}
-                    </p>
-                    <p class="MaksNN-text M">
-                        {{ contentStore.getLocaleText("generalInfo_3") }}
-                    </p>
-                </div>
-            </article>
-
-            <article
-                v-else-if="activeSection === 'news'"
-                id="about-section-news"
-                class="about-section news"
-                role="tabpanel"
-            >
-                <img
-                    src="/images/about-us/rosneft.jpg"
-                    :alt="currentNews.title"
-                    class="news__image"
-                />
-                <div class="news__content">
-                    <h2 class="news__title MaksNN-text XL SemiBold">
-                        {{ currentNews.title }}
-                    </h2>
-                    <p
-                        v-for="paragraph in currentNews.paragraphs"
-                        :key="paragraph"
-                        class="MaksNN-text M"
-                    >
-                        {{ paragraph }}
-                    </p>
-                </div>
-            </article>
-
-            <article
-                v-else-if="activeSection === 'leader'"
-                id="about-section-leader"
-                class="about-section leader"
-                role="tabpanel"
-            >
-                <div class="leader__profile">
-                    <img
-                        src="/images/about-us/leader.webp"
-                        :alt="contentStore.getLocaleText('leaderLine1')"
-                        class="leader__image"
-                    />
-                    <div class="leader__info">
-                        <p
-                            v-for="(line, index) in leaderLines"
-                            :key="line"
-                            class="MaksNN-text M"
-                            :class="{ SemiBold: index === 0 }"
-                        >
-                            {{ contentStore.getLocaleText(line) }}
-                        </p>
-                    </div>
-                </div>
-
-                <div v-if="contentStore.locale === 'ru'" class="interview">
-                    <p class="interview__intro MaksNN-text M">
-                        Могут ли российские производители успешно состязаться с крупными западными
-                        компаниями? Директор ООО «Макс-НН» Александр Долгополов получил ответы на
-                        этот вопрос в результате собственной работы.
-                    </p>
-                    <h2 class="interview__title MaksNN-text XL Bold">
-                        Александр Долгополов: как развить уникальное производство
-                    </h2>
-
-                    <div v-for="item in interview" :key="item.question" class="interview__item">
-                        <h3 class="interview__question MaksNN-text M SemiBold">
-                            {{ item.question }}
-                        </h3>
-                        <p
-                            v-for="paragraph in item.answer"
-                            :key="paragraph"
-                            class="interview__answer MaksNN-text M"
-                        >
-                            {{ paragraph }}
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article
-                v-else
-                id="about-section-development"
-                class="about-section development"
-                role="tabpanel"
-            >
-                <div class="about-hero about-hero--development">
-                    <img src="/images/about-us/chemical.jpg" alt="" class="about-hero__image" />
-                    <p class="about-hero__caption MaksNN-text L SemiBold">
-                        {{ contentStore.getLocaleText("pvlTextOnImg") }}
-                    </p>
-                </div>
-
-                <ol class="development__list">
-                    <li
-                        v-for="(line, index) in developmentLines"
-                        :key="line"
-                        class="development__item"
-                    >
-                        <span class="development__number MaksNN-text M Bold">
-                            {{ index + 1 }}
-                        </span>
-                        <p class="MaksNN-text M">
-                            {{ contentStore.getLocaleText(line) }}
-                        </p>
-                    </li>
-                </ol>
-            </article>
-        </div>
-    </section>
-</template>
-
-<style lang="scss" scoped src="./style.scss"></style>

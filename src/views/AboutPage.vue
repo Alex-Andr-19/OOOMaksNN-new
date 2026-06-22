@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AboutUs from "@/components/AboutUs/AboutUs.vue";
+import AboutView from "@/modules/About/AboutView.vue";
 </script>
 
 <template>
-    <AboutUs />
+    <AboutView />
 </template>

@@ -1,52 +1,36 @@
 <script setup lang="ts">
-import ProductsBlock from "@/components/ProductsBlock/ProductsBlock.vue";
+import ProductCatalog from "@/modules/Products/ProductCatalog.vue";
 import { useContentStore } from "@/stores/content";
 import type { i18nContentName } from "@/types/i18n";
 import MediaCarousel from "@modules/MainPage/MediaCarousel/MediaCarousel.vue";
+import type { MediaSlide } from "@modules/MainPage/MediaCarousel/types";
 import OffersBlock from "@modules/MainPage/OffersBlock/OffersBlock.vue";
-import { onMounted, ref, watch } from "vue";
+import { computed } from "vue";
 
 const contentStore = useContentStore();
 
-const carouselImages = ref<string[]>([]);
-const carouselDescriptions = ref<string[]>([]);
+const carouselSlides = computed<MediaSlide[]>(() =>
+    Array.from({ length: 4 }, (_, index) => {
+        const slideNumber = index + 1;
+        const textKey = `carousel_slide_${slideNumber}` as i18nContentName;
 
-function createCarousel() {
-    let i;
-    for (i = 1; i <= 4; i++) {
-        carouselImages.value.push(`/images/carousel/slide-${i}.webp`);
-        let textName = `carousel_slide_${i}` as i18nContentName;
-        carouselDescriptions.value.push(contentStore.getLocaleText(textName));
-    }
-}
-
-watch(
-    () => contentStore.locale,
-    () => {
-        carouselDescriptions.value = [];
-        let i;
-        for (i = 1; i <= 4; i++) {
-            let textName = `carousel_slide_${i}` as i18nContentName;
-            carouselDescriptions.value.push(contentStore.getLocaleText(textName));
-        }
-    },
+        return {
+            image: `/images/carousel/slide-${slideNumber}.webp`,
+            description: contentStore.getLocaleText(textKey),
+        };
+    }),
 );
-
-createCarousel();
-onMounted(() => {
-    console.log("HalloPage mounted!!!");
-});
 </script>
 
 <template>
     <div class="main-page">
         <section class="welcome-block">
-            <MediaCarousel :images="carouselImages" :descriptions="carouselDescriptions" />
+            <MediaCarousel :slides="carouselSlides" />
         </section>
 
         <OffersBlock />
 
-        <ProductsBlock />
+        <ProductCatalog />
     </div>
 </template>
 

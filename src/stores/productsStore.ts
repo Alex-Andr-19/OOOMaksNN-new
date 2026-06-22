@@ -21,25 +21,10 @@ export const useProductsStore = defineStore("products", () => {
         }
     }
 
-    function getProductNameByTitle(title: string) {
-        let res: ProductsNames | undefined;
-
-        let key: ProductsNames;
-        for (key in content.value) {
-            if (content.value[key].ru.title === title || content.value[key].en.title === title) {
-                res = key;
-                break;
-            }
-        }
-
-        return res || "";
-    }
-
     return {
         productNames,
         selectedProduct,
         getContentByName,
         setSelectedProduct,
-        getProductNameByTitle,
     };
 });
