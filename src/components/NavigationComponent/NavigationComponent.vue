@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useContentStore } from "@/stores/content";
 import type { DeviceSizeTypes } from "@/types";
-import type { i18nContentName } from "@helpers/i18n";
+import type { i18nContentName } from "@/types/i18n";
 import { inject, ref, watch, type Ref } from "vue";
 import { useRoute } from "vue-router";
 import LocaleBlock from "../LocaleBlock/LocaleBlock.vue";

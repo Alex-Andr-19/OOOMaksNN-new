@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useContentStore } from "@/stores/content";
-import type { i18nContentName } from "@helpers/i18n";
+import type { i18nContentName } from "@/types/i18n";
 import { ref, watch } from "vue";
 
 const contentStore = useContentStore();
@@ -77,7 +77,7 @@ watch(
             </div>
             <div class="contact">
                 <span class="contact__title MaksNN-text M L_tablet XL_mobile SemiBold">
-                    {{ contacts[1].title }}
+                    {{ contacts[2].title }}
                 </span>
 
                 <div class="contact__text-block">
