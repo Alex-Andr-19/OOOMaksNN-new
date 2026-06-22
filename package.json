@@ -13,6 +13,9 @@
         "publish-cite": "pnpm build && gh-pages -d dist"
     },
     "dependencies": {
+        "@tsparticles/engine": "^4.2.1",
+        "@tsparticles/slim": "^4.2.1",
+        "@tsparticles/vue3": "^4.2.1",
         "pinia": "^3.0.1",
         "sass": "^1.86.0",
         "vue": "^3.5.13",

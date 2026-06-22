@@ -4,6 +4,7 @@ import type { i18nContentName } from "@/types/i18n";
 import { ref, watch } from "vue";
 
 const contentStore = useContentStore();
+const currentYear = new Date().getFullYear();
 
 type ContactsType = {
     title: string;
@@ -91,7 +92,7 @@ watch(
             </div>
         </div>
 
-        <span class="footer__copy-right MaksNN-text S"> © ООО "Макс-НН", 1994-2025 </span>
+        <span class="footer__copy-right MaksNN-text S"> © ООО "Макс-НН", 1994-{{ currentYear }} </span>
     </footer>
 </template>
 
